@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.namaztask">
+
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permisson.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_CHECKIN_PROPERTIES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <permission
+        android:name="com.example.namaztask.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.namaztask.permission.MAPS_RECEIVE" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".splash"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DBtry" />
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".login"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".abc" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivityF"
+            android:label="@string/title_activity_maps_f"></activity>
+        <activity
+            android:name=".ActivityOne"
+            android:label="@string/title_activity_one"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".AdminRegistrationMap"
+            android:label="@string/title_activity_admin_registration_map" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.CustomTheme"></activity>
+        <activity
+            android:name=".PrayerRoomRegistrationMap"
+            android:label="@string/title_activity_prayer_room_registration_map" />
+        <activity android:name=".AdminRegistration" />
+        <activity android:name=".updateNamazTiming"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity android:name=".addPrayerRoom" />
+        <activity android:name=".BasicActivty" />
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+    </application>
+
+</manifest>
